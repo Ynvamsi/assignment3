@@ -14,7 +14,7 @@ const productDB = [
 const resolvers = {
   Query: {
     
-    productList,
+    productform,
   },
   Mutation: {
     
@@ -25,7 +25,7 @@ const resolvers = {
 
 
 
-function productList() {
+function productform() {
   return productDB;
 }
 function addProduct(_, { product }) {

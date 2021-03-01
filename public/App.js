@@ -89,7 +89,7 @@ class ProductAdd extends React.Component {
 
 const products = [];
 
-class ProductList extends React.Component {
+class Productform extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -104,7 +104,7 @@ class ProductList extends React.Component {
 
   async loadData() {
     const query = `query {
-      productList{
+      productform{
         id name price category image
       }
     }`;
@@ -119,7 +119,7 @@ class ProductList extends React.Component {
     });
     const result = await response.json();
     this.setState({
-      products: result.data.productList
+      products: result.data.productform
     });
   }
 
@@ -157,4 +157,4 @@ class ProductList extends React.Component {
 
 }
 
-ReactDOM.render(React.createElement(ProductList, null), contentNode);
+ReactDOM.render(React.createElement(Productform, null), contentNode);
